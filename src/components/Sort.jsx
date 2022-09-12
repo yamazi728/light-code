@@ -8,27 +8,27 @@ const Sort = ({ value, onChangeSort }) => {
 	const [open, setOpen] = useState(false)
 	const list = [
 		{
-			name: 'popularity ⬆️',
+			name: 'популярность ⬆️',
 			sortProperty: 'rating',
 		},
 		{
-			name: 'popularity ⬇️',
+			name: 'популярность  ⬇️',
 			sortProperty: '-rating',
 		},
 		{
-			name: 'by price ⬆️',
+			name: 'по цене ⬆️',
 			sortProperty: 'price',
 		},
 		{
-			name: 'by price ⬇️',
+			name: 'по цене ⬇️',
 			sortProperty: '-price',
 		},
 		{
-			name: 'alphabetically ⬆️',
+			name: 'по алфавиту ⬆️',
 			sortProperty: 'alphabetically',
 		},
 		{
-			name: 'alphabetically ⬇️',
+			name: 'по алфавиту ⬇️',
 			sortProperty: '-alphabetically',
 		},
 	]
@@ -52,7 +52,7 @@ const Sort = ({ value, onChangeSort }) => {
 						fill='#2C2C2C'
 					/>
 				</svg>
-				<b>Sorting by:</b>
+				<b>Сортировать по:</b>
 				<span onClick={() => setOpen(!open)}>{sort.name}</span>
 			</div>
 			{open && (

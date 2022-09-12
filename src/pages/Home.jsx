@@ -1,9 +1,9 @@
-import { current } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Categories from '../components/Categories'
 import Paginate from '../components/Paginate/Paginate'
+import Searching from '../components/Searching/Searching'
 import TshirtBlock from '../components/ShirtBlock'
 import ShirtSkeleton from '../components/ShirtBlock/ShirtSkeleton'
 import Sort from '../components/Sort'
@@ -29,7 +29,7 @@ const Home = () => {
 
 		axios
 			.get(
-				`https://628de099a339dfef87a24573.mockapi.io/items?page=${currentPage}&limit=5&${category}&sortBy=${sortBy}&order=${order}${search}`
+				`https://62ea7ae63a5f1572e87ca426.mockapi.io/rickymorti?page=${currentPage}&limit=5&${category}&sortBy=${sortBy}&order=${order}${search}`
 			)
 			.then(res => {
 				setProducts(res.data)
@@ -62,6 +62,7 @@ const Home = () => {
 				<Categories value={categoryId} onChangeCategory={changeCategory} />
 				<Sort />
 			</div>
+			<Searching />
 
 			<h2 className='content__title'>Сhoose</h2>
 

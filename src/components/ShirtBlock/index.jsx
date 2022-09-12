@@ -1,9 +1,8 @@
 import { useState } from 'react'
 
 const TshirtBlock = ({ title, price, imageUrl, sizes, types }) => {
-	const typesName = ['Хлопок', 'Синтетика']
+	const typesName = ['1080p', '720p']
 	const [activeTypes, setActiveTypes] = useState(0)
-	const [activeSize, setActiveSize] = useState(0)
 	const [shirt, setShirt] = useState(0)
 
 	// Функция изменения количества товара
@@ -18,6 +17,7 @@ const TshirtBlock = ({ title, price, imageUrl, sizes, types }) => {
 					<img className='shirt-block__image' src={imageUrl} alt='Tshirt' />
 					<h4 className='shirt-block__title'>{title}</h4>
 				</a>
+
 				<div className='shirt-block__selector'>
 					<ul>
 						{types.map((type, index) => (

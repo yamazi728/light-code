@@ -54,7 +54,7 @@ const Searching = () => {
 			</svg>
 			<input
 				ref={inputRef}
-				placeholder='Searching T-Shirt'
+				placeholder='Searching Series'
 				value={searchValue}
 				onChange={changeInputValue}
 			/>

@@ -2,12 +2,11 @@ import { useState } from 'react'
 
 const Categories = ({ value, onChangeCategory }) => {
 	const categories = [
-		'All',
-		"Men's",
-		'Female',
-		'Childish',
-		'Box',
-		'Accessories',
+		'Все',
+		'Самые новые',
+		'Старые',
+		'Познавательные',
+		'Смешные',
 	]
 
 	return (
